@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="index,follow">
+<title>隐私政策 · 索隐 PDF 电子索引查阅器</title>
+<style>
+  :root{
+    --paper:#f7f4ee;
+    --paper-2:#fffdf9;
+    --ink:#26221d;
+    --ink-2:#5c554c;
+    --muted:#8b8377;
+    --line:#ded5c6;
+    --red:#8f2f2a;
+    --red-soft:#f2e4df;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 500px at 50% -120px, #fffdf8 0%, rgba(255,253,248,0) 70%),
+      var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+    font-size:16px;
+    line-height:1.9;
+    letter-spacing:.01em;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:34px 22px 64px;}
+  .paper{
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    box-shadow:0 18px 50px rgba(70,52,32,.10);
+    padding:clamp(26px,5vw,58px) clamp(22px,5vw,64px);
+    position:relative;
+    overflow:hidden;
+  }
+  .paper::before{
+    content:"";
+    position:absolute;inset:0 0 auto 0;height:5px;
+    background:linear-gradient(90deg,var(--red),#b45a46 45%,#d8b49a 70%,transparent);
+    opacity:.9;
+  }
+  header{padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px;}
+  .eyebrow{
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+    font-size:12.5px;color:var(--muted);letter-spacing:.12em;
+    text-transform:uppercase;margin-bottom:14px;
+  }
+  .tag{
+    display:inline-flex;align-items:center;gap:6px;
+    border:1px solid var(--line);border-radius:999px;
+    padding:3px 10px;color:var(--ink-2);
+    letter-spacing:.06em;background:#fbf8f1;
+  }
+  .tag.red{color:var(--red);border-color:#e3c8bd;background:var(--red-soft);}
+  h1{
+    margin:0 0 8px;
+    font-family:"Songti SC","STSong","Noto Serif SC","SimSun",serif;
+    font-size:clamp(28px,5vw,40px);
+    line-height:1.3;font-weight:700;letter-spacing:.04em;
+  }
+  .sub{margin:0;color:var(--ink-2);font-size:15px;}
+  .meta{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:8px 18px;margin-top:18px;font-size:13.5px;color:var(--muted);
+  }
+  .meta b{color:var(--ink-2);font-weight:600;}
+  .lead{
+    margin:0 0 24px;padding:16px 18px;
+    background:linear-gradient(90deg,#fbf7ef,#fffdf9);
+    border-left:3px solid var(--red);
+    color:var(--ink-2);font-size:15.5px;
+  }
+  h2{
+    display:flex;gap:12px;align-items:baseline;
+    margin:34px 0 10px;font-size:19px;line-height:1.5;letter-spacing:.02em;
+    font-weight:700;
+  }
+  h2 .no{
+    flex:0 0 auto;color:var(--red);font-family:Georgia,"Times New Roman",serif;
+    font-size:13px;letter-spacing:.08em;font-weight:600;
+    border-bottom:1px solid #d9b8aa;padding-bottom:2px;
+  }
+  h3{margin:22px 0 6px;font-size:16px;font-weight:700;color:#3a332b;}
+  p{margin:0 0 12px;}
+  ul{margin:6px 0 14px;padding-left:1.35em;}
+  li{margin:5px 0;}
+  .muted{color:var(--muted);}
+  .note{
+    margin:18px 0 0;padding:14px 16px;
+    background:#fbf7f0;border:1px solid #eadfce;border-radius:8px;
+    font-size:14.5px;color:var(--ink-2);
+  }
+  table{
+    width:100%;border-collapse:collapse;margin:14px 0 18px;
+    font-size:14px;background:#fffcf6;
+  }
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;}
+  th{background:#f3ede2;color:#3a332b;font-weight:700;white-space:nowrap;}
+  code,.mono{
+    font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    font-size:.92em;background:#f2ede4;border:1px solid #e4dacb;
+    border-radius:4px;padding:1px 5px;
+  }
+  .contact{
+    margin-top:16px;padding:18px 20px;
+    background:linear-gradient(135deg,#fdf9f2,#f8eee8);
+    border:1px solid #e5cdbf;border-radius:10px;
+  }
+  .contact .line{margin:6px 0;}
+  .fill{
+    display:inline-block;min-width:210px;
+    border-bottom:1px dashed #b98d7c;color:var(--red);
+    font-weight:600;
+  }
+  footer{
+    margin-top:42px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--muted);line-height:1.8;
+  }
+  a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(143,47,42,.35);}
+  a:hover{border-bottom-color:var(--red);}
+  @media (max-width:560px){
+    .wrap{padding:16px 12px 36px;}
+    .paper{padding:26px 20px 34px;box-shadow:0 10px 26px rgba(70,52,32,.08);}
+    body{font-size:15.5px;line-height:1.85;}
+    h1{font-size:29px;}
+    th{white-space:normal;}
+  }
+  @media print{
+    body{background:#fff;font-size:12pt;}
+    .wrap{max-width:none;padding:0;}
+    .paper{border:0;box-shadow:none;padding:0;}
+    .paper::before{display:none;}
+    a{color:#000;border:0;}
+    h2{break-after:avoid;}
+    .contact{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <article class="paper">
+    <header>
+      <div class="eyebrow">
+        <span class="tag red">隐私政策</span>
+        <span class="tag">纯本地 · 离线运行</span>
+        <span class="tag">无账号 · 无广告 · 无第三方 SDK</span>
+      </div>
+      <h1>索隐 · 隐私政策</h1>
+      <p class="sub">索隐 PDF 电子索引查阅器　V2.24</p>
+      <div class="meta">
+        <div><b>开发者：</b>郭海亮（个人开发者，瓦釜斋印室）</div>
+        <div><b>生效日期：</b>2026 年 11 月 23 日</div>
+        <div><b>更新日期：</b>2026 年 11 月 23 日</div>
+        <div><b>适用平台：</b>Android 5.0 及以上</div>
+      </div>
+    </header>
+
+    <p class="lead">
+      本应用是一款纯本地、离线的字典 / 印谱 / 书法字典 PDF 索引查阅工具。
+      我们不设账号、不联网、不上传你的书籍、索引或使用记录。
+      本政策说明本应用会接触哪些信息、为什么接触，以及你可以如何管理这些数据。
+      请你在使用前完整阅读；你可以在应用内【设置】→【隐私政策】随时再次查看。
+    </p>
+
+    <h2><span class="no">01</span>我们收集哪些信息</h2>
+    <p><strong>本应用不收集、不上传任何个人信息。</strong>具体而言：</p>
+    <ul>
+      <li>不要求注册、登录，不收集手机号、姓名、身份证号、地址、通讯录、短信、位置、相册或设备标识；</li>
+      <li>不接入第三方统计、广告、推送、支付、地图或社交 SDK；</li>
+      <li>应用未申请 <span class="mono">INTERNET</span> 网络权限，因此不具备联网上传、云端同步或远程更新的能力；</li>
+      <li>你在应用内创建的书名、索引、页码偏移、检索组、最近阅读页，只保存在本机应用私有目录，不会发送到任何服务器。</li>
+    </ul>
+    <p class="muted">应用商店的下载、分发、评论与开发者后台数据，由各商店平台按照其自身的隐私政策处理，不属于本应用收集的数据。</p>
+
+    <h2><span class="no">02</span>权限说明</h2>
+    <p>本应用只在必要场景申请以下系统能力，且均由你在具体操作时触发：</p>
+    <table>
+      <thead>
+        <tr><th>权限 / 能力</th><th>适用版本</th><th>用途</th><th>是否可拒绝</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>读取外部存储<br><span class="mono">READ_EXTERNAL_STORAGE</span></td>
+          <td>Android 12 及以下</td>
+          <td>仅在你点击“扫描本地 PDF 自动关联（找回授权）”时，用于列出手机中 PDF 的文件名与大小，帮助你找回已登记的书。</td>
+          <td>可以拒绝；拒绝后可改用系统文件选择器或“选文件夹”授权。</td>
+        </tr>
+        <tr>
+          <td>写入外部存储<br><span class="mono">WRITE_EXTERNAL_STORAGE</span></td>
+          <td>Android 9 及以下</td>
+          <td>仅在你导出索引模板、备份包或框选截图时，把文件写入“下载/字典索引”“下载/字典备份”等公共目录。</td>
+          <td>可以拒绝；拒绝后无法写入公共“下载”目录。</td>
+        </tr>
+        <tr>
+          <td>系统文件选择器 / 文件夹授权</td>
+          <td>全部版本</td>
+          <td>你手动选择一个 PDF，或选择一个文件夹时，系统只授予本应用读取你选定内容的权限；重命名功能也只作用于你选中的那个 PDF。</td>
+          <td>可以取消选择；不选择则无法添加对应书籍。</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>本应用不申请相机、麦克风、通讯录、短信、位置、电话状态、日历、健身运动等权限，也不读取与所选 PDF 无关的文件。</p>
+
+    <h2><span class="no">03</span>信息的存储与删除</h2>
+    <h3>3.1 存在哪里</h3>
+    <p>书目与索引保存在本机应用私有目录，主要包括：</p>
+    <ul>
+      <li><span class="mono">books.json</span>：书目、原文件名、页码偏移、词条与阅读位置；</li>
+      <li><span class="mono">books.json.bak1 ~ bak3</span>：每次保存时自动轮换的三份历史备份，用于防止写入中断损坏；</li>
+      <li><span class="mono">books/</span>：索引副本、封面缓存，以及内置示例书自带的演示 PDF。</li>
+    </ul>
+    <p><strong>你的原始 PDF 不会被复制进应用。</strong>应用只记录系统授权位置（路径或 <span class="mono">content://</span> URI）与登记时的原文件名。打开 PDF 时直接读取原文件；只有你主动使用“重命名”功能时，才会修改你选中的那个 PDF 的文件名。</p>
+
+    <h3>3.2 备份包</h3>
+    <p>【一键导出数据】生成的 zip 只包含书目、索引、页码偏移与检索组，<strong>不包含 PDF 原件</strong>，以避免手机里出现重复副本。备份包由你自行保存、转移或删除，应用不会自动上传。</p>
+
+    <h3>3.3 删除方式</h3>
+    <ul>
+      <li>在书库维护页删除某一本书：应用会删除该书在应用内的索引副本、封面缓存；不会删除你的原始 PDF；</li>
+      <li>卸载应用：会删除应用私有目录中的全部数据。卸载前请先用【一键导出数据】自行备份；</li>
+      <li>清空应用数据：效果同上，且会收回系统对原 PDF 的读取授权，需要重新选择或扫描关联。</li>
+    </ul>
+
+    <h2><span class="no">04</span>信息的共享、转让与公开披露</h2>
+    <p>本应用不向任何第三方共享、转让或公开披露你的书目、索引、PDF 内容或使用记录。应用内不包含第三方 SDK；PDF 渲染、文件选择、分享截图等能力均使用 Android 系统组件完成。</p>
+    <p>除以下情形外，我们不会主动对外提供你的信息：</p>
+    <ul>
+      <li>你自行通过系统分享功能，把截图、备份包或索引文件发送给他人；</li>
+      <li>法律法规规定、司法机关或监管机关依法要求提供。</li>
+    </ul>
+
+    <h2><span class="no">05</span>你的权利</h2>
+    <ul>
+      <li><strong>查看与更正：</strong>在应用内查看、修改书名、索引、页码偏移与检索组；</li>
+      <li><strong>删除：</strong>逐本删除书目，或卸载应用 / 清空应用数据；</li>
+      <li><strong>导出：</strong>通过【一键导出数据】把书目与索引导出为 zip，自行留存或迁移；</li>
+      <li><strong>撤回同意：</strong>本应用不收集个人信息；你可以停止使用、卸载应用或清空数据来终止本地数据处理。若系统权限已被授予，可在手机“设置 → 应用 → 索隐 → 权限”中随时关闭。</li>
+    </ul>
+
+    <h2><span class="no">06</span>未成年人保护</h2>
+    <p>本应用是面向工具书查阅的通用工具，不面向未成年人收集任何个人信息，也不包含社交、直播、付费等面向未成年人的功能。未成年人应在监护人指导下使用；监护人如发现相关权益受到影响，可通过下方联系方式与我们联系。</p>
+
+    <h2><span class="no">07</span>信息安全</h2>
+    <p>本应用不联网，数据默认只存在于你的设备本地；应用使用系统应用私有目录保存书库与索引，并在每次保存时保留三份历史备份。安装包使用正式证书签名，并启用代码混淆与启动签名自校验，以降低被篡改后诱导安装的风险。</p>
+    <p class="muted">任何本地存储都无法承诺绝对安全。请妥善保管手机与备份文件，不要在不信任的设备上导入来源不明的备份包。</p>
+
+    <h2><span class="no">08</span>本政策的变更</h2>
+    <p>本政策如有更新，会在新版本应用的【设置】→【隐私政策】中发布，并更新页面顶部的“更新日期”。若变更涉及你的权利或数据处理方式的重大变化，我们会在应用内以显著方式提示。继续使用新版本前，请你阅读更新后的政策。</p>
+
+    <h2><span class="no">09</span>适用法律与争议解决</h2>
+    <p>本政策适用中华人民共和国法律。因本政策或本应用产生的争议，双方应友好协商；协商不成的，可向开发者所在地有管辖权的人民法院提起诉讼。</p>
+
+    <h2><span class="no">10</span>联系我们</h2>
+    <div class="contact">
+      <div class="line"><strong>开发者：</strong>郭海亮（个人开发者，瓦釜斋印室）</div>
+      <div class="line"><strong>应用名称：</strong>索隐 PDF 电子索引查阅器（V2.24）</div>
+      <div class="line"><strong>联系邮箱：</strong>ghl66866@qq.com</div>
+      <div class="line"><strong>联系说明：</strong>请注明“索隐隐私政策”，我们会在收到后 15 个工作日内回复。</div>
+    </div>
+    <p class="note">
+      本页面为公网版隐私政策，内容与应用内【设置】→【隐私政策】保持一致。
+      如你在应用内看到的版本与本页不一致，以更新日期较新的版本为准。
+    </p>
+
+    <footer>
+      <div>索隐 PDF 电子索引查阅器 · 隐私政策 · 版本 V2.24</div>
+      <div>本页不收集访问者信息，不设置登录、验证码、统计脚本或第三方 Cookie。</div>
+    </footer>
+  </article>
+</main>
+</body>
+</html>
